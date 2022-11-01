@@ -1,0 +1,4 @@
+Nama		    : Alifina Aulia Azzahra
+No - Peserta	: PYTN-KS07-004
+Link		    : 1. Github = https://github.com/alifinaaulia/PYTN_KampusMerdeka_FP1.git
+                  2. Heroku = https://ks7-g4-fp1.herokuapp.com/

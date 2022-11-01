@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project 1 Data Science</title>
+</head>
+<body>
+    <div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form action="{{url_for('predict')}}" method="post">
+        <h3>Prediksi Harga Taksi Lyft/Uber</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="float" name="name" class="form-control" placeholder="name *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="distance" class="form-control" placeholder="distance *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="surge_multiplier" class="form-control" placeholder="surge_multiplier *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="cab_type" class="form-control" placeholder="cab_type *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="destination" class="form-control" placeholder="destination *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="source" class="form-control" placeholder="source *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="visibility" class="form-control" placeholder="visibility *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="windSpeed" class="form-control" placeholder="windSpeed *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="short_summary" class="form-control" placeholder="short_summary *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="float" name="day" class="form-control" placeholder="day *" value="" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btnContact">Prediksi</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Hasil Prediksi</h3>
+                <h3>{{ prediction_text }}</h3>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
